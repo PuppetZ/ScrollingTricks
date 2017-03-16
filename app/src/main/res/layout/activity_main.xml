@@ -1,19 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.zz.scrollingtricks.MainActivity">
+    android:layout_height="match_parent">
+
+
+    <com.example.zz.scrollingtricks.MyScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/top_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/colorYellow"
+                android:gravity="center"
+                android:text="@string/top_tab"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/float_tab"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/others"/>
+        </LinearLayout>
+    </com.example.zz.scrollingtricks.MyScrollView>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/float_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/float_tab"/>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
