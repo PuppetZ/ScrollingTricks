@@ -60,18 +60,27 @@ public class MoreTabActivity extends AppCompatActivity {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
+
                 curPosition = mLayoutManager.findFirstVisibleItemPosition();
-                if (mAdapter.getItemViewType(curPosition) == RecyclerViewAdapter.TYPE_GROUP) {
-                    int j = curPosition / 5;
-                    mTextView.setText("第" + j + "组");//第一个group
-                    View viewByPosition = mLayoutManager.findViewByPosition(curPosition + 5);//下一个group
-                    if (viewByPosition.getHeight() < mTextView.getHeight()) {
-                        int i = (curPosition + 5) / 5;
-                        mTextView.setText("第" + i + "组");
+                mTextView.setY(0);//初始时 tab处于悬浮状态
+                if (mAdapter.getItemViewType(curPosition + 1) == RecyclerViewAdapter.TYPE_GROUP) {
+                    View viewByPosition = mLayoutManager.findViewByPosition(curPosition + 1);
+                    if (viewByPosition.getTop() > mTextView.getHeight()) {//判断tab悬浮时的条件
+                        mTextView.setY(0);
+                    } else {
+                        mTextView.setY(-(-(viewByPosition.getTop()) + mTextView.getHeight()));
                     }
+                }
+                int j = (curPosition + 1) / 5;
+                mTextView.setText("第" + j + "组");//第一个group
+                mTextView.setVisibility(View.VISIBLE);
+                View viewByPosition = mLayoutManager.findViewByPosition(curPosition + 1 + 5);//下一个group
+                if (viewByPosition.getHeight() < mTextView.getHeight()) {
+
+                    int i = (curPosition + 5 + 1) / 5;
+                    mTextView.setText("第" + i + "组");
                 }
             }
         });
     }
-
 }
