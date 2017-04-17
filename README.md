@@ -7,7 +7,7 @@
 <br>
    布局：
    <br>
-  ```
+        
    <?xml version="1.0" encoding="utf-8"?>
     <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -45,7 +45,7 @@
         android:text="@string/float_tab"/>
 
   </RelativeLayout>
-  ```
+        
   <br>
    具体实现方法：需要重新写 `ScrollView` <br>
    ```
