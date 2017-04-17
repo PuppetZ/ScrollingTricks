@@ -45,6 +45,7 @@
 
   </RelativeLayout>
   ```
+  <br>
    具体实现方法：需要重新写 `ScrollView` <br>
    ```
    public void onScrollChanged(MyScrollView scrollView, int x, int y, int oldx, int oldy) {
@@ -57,4 +58,5 @@
         }
     }
   ```
-  当ScrollView的Y轴滑动距离大于处于顶部TAB的高度时，顶部的TAB显示出来，否则消失。
+  <br>
+  当ScrollView的Y轴滑动距离大于处于顶部TAB的高度时，顶部的TAB显示出来，否则消失。<br>
