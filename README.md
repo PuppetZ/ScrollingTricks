@@ -5,9 +5,10 @@
   ![](https://github.com/PuppetZ/ScrollingTricks/blob/master/art/2.gif?raw=true)<br>
 <br>
 <br>
-   布局：<br>
-   ```
-    <?xml version="1.0" encoding="utf-8"?>
+   布局：
+   <br>
+  ```
+   <?xml version="1.0" encoding="utf-8"?>
     <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
