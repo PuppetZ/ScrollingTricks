@@ -6,9 +6,9 @@
 <br>
 <br>
    布局：<br>
-   ```Java
-   <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+   ```
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -43,10 +43,10 @@
         android:visibility="gone"
         android:text="@string/float_tab"/>
 
-</RelativeLayout>
-```
-   具体实现方法：需要重新写`ScrollView`<br>
-   ```Java
+  </RelativeLayout>
+  ```
+   具体实现方法：需要重新写 `ScrollView` <br>
+   ```
    public void onScrollChanged(MyScrollView scrollView, int x, int y, int oldx, int oldy) {
         if (topView != null) {
             if (y > topView.getHeight()) {//Y轴上滑位移大于顶部tab高度时
