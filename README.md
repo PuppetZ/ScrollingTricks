@@ -35,7 +35,7 @@
                         mTextView.setY(-(-(viewByPosition.getTop()) + mTextView.getHeight()));
                     }
                 }
-                int j = (curPosition + 1) / 5;//除以5 是因为 5个位一组，具体情况 具体分析
+                int j = (curPosition + 1) / 5;//除以5是因为5个位一组，具体情况具体分析
                 mTextView.setText("第" + j + "组");//第一个group
                 mTextView.setVisibility(View.VISIBLE);
                 View viewByPosition = mLayoutManager.findViewByPosition(curPosition + 1 + 5);//下一个group
