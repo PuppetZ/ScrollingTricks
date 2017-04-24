@@ -19,7 +19,6 @@
     ```
     <br>
 * 多组Tab顶部悬浮、固定<br>
-<br>
   ![](https://github.com/PuppetZ/ScrollingTricks/blob/master/art/4.gif?raw=true)<br>
   * `实现原理`：这里使用的是RecyclerView，原理同上个。<br>
   * `实现代码`：RecyclerView滚动监听<br>
